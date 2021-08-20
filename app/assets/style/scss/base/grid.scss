@@ -1,0 +1,20 @@
+:root {
+    --column: 12;
+    --air-l: 30px;
+    --air-b: 20px;
+}
+
+.bCols {
+    $this: &;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 calc(var(--air-b) * -1) calc(var(--air-l) * -1);
+
+	&__col {
+		margin: 0 0 var(--air-b) var(--air-l);
+	}
+}
+
+@mixin size($n) {
+    width: calc(100% / var(--column) * #{$n} - var(--air-l));
+}
