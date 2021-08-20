@@ -1,3 +1,148 @@
-/*~~~~~~~~~~~~~~~~~~~~~~~~~
-COMMON BLOCKS
-~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*==================== COMON BLOCKS ====================*/
+/*firm info*/
+.firm-info {
+	$this: &;
+	display: inline-flex;
+	align-items: center;
+
+	&__ic {
+		display: inline-block;
+		margin-right: getEm(4, 16);
+		max-width: 20px;
+		max-height: 20px;
+		fill: var(--color-primary);
+	}
+
+	&--work {
+		#{$this}__ic {
+			max-height: getEm(37, 17);
+			max-width: getEm(37, 17);
+			margin-right: -#{getEm(20, 14)};
+		}
+	}
+
+	&--loc {
+		#{$this}__ic {
+			max-height: getEm(24, 16);
+			max-width: getEm(20, 16);
+		}
+	}
+}
+
+/*sci*/
+.sci {
+	display: flex;
+	align-items: center;
+
+	&__link {
+		flex-shrink: 0;
+		display: block;
+		margin-left: 7px;
+		transition: transform $duration;
+
+		&:not(.sci__link--phone):hover {
+			transform: scale(1.1);
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&--phone {
+			margin-left: getEm(13, 16);
+			align-self: center;
+			height: auto;
+		}
+
+		svg {
+			display: block;
+			width: 27.5px;
+			height: 27.5px;
+		}
+	}
+
+	&__hint {
+		font-size: getEm(14, 16);
+		color: #A6A7A7;
+	}
+}
+
+/*sci link*/
+.sci-link {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+
+	svg, img {
+		max-height: 100%;
+		max-width: 100%;
+	}
+}
+
+/*logo*/
+.logo {
+	display: block;
+	max-width: 220px;
+}
+
+/*hamburger*/
+.hamburger {
+	$this: &;
+	position: relative;
+	width: 23px;
+	height: 20px;
+	color: var(--color-primary);
+
+	span {
+		top: 50%;
+		display: block;
+		margin-top: -2px;
+		transition: transform 75ms cubic-bezier(.55,.055,.675,.19) .15s,background-color 0s linear 75ms;
+	}
+
+	&.active span {
+		transition: transform 75ms cubic-bezier(.215,.61,.355,1) 0s,background-color 0s linear .15s;
+		transform: rotate(90deg);
+		background-color: transparent!important;
+	}
+
+	&.active span::after {
+		bottom: 0;
+		transition: bottom 75ms ease-out .1s,transform 75ms cubic-bezier(.215,.61,.355,1) .15s;
+		transform: rotate(45deg);
+	}
+	&.active span::before {
+		top: 0;
+		transition: top 75ms ease-out .1s,transform 75ms cubic-bezier(.215,.61,.355,1) .15s;
+			transform: rotate(-45deg);
+	}
+
+	span,
+	span::before,
+	span:after {
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background-color: currentColor;
+		transition-timing-function: ease;
+		transition-duration: .15s;
+		transition-property: transform;
+		border-radius: 1.5px;
+	}
+
+	span::before,
+	span::after {
+		display: block;
+		content: "";
+	}
+
+	span::before {
+		top: -8px;
+		transition: top 75ms ease-in 75ms,transform 75ms cubic-bezier(.55,.055,.675,.19) 0s;
+	}
+
+	span::after {
+		bottom: -8px;
+		transition: bottom 75ms ease-in 75ms,transform 75ms cubic-bezier(.55,.055,.675,.19) 0s;
+	}
+}

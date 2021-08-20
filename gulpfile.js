@@ -12,7 +12,7 @@ const gcmq = require('gulp-group-css-media-queries');
 const babel = require('gulp-babel');
 
 function svgSprites() {
-	return src('app/assets/img/icons/svg/*.svg')
+	return src('app/assets/img/spriteSvg/unification/*.svg')
 		.pipe(svgSprite({
 			mode: {
 				stack: {
@@ -20,7 +20,7 @@ function svgSprites() {
 				}
 			}
 		}))
-		.pipe(dest('app/assets/img'))
+		.pipe(dest('app/assets/img/spriteSvg'))
 }
 
 function browsersync() {
@@ -113,7 +113,7 @@ function watching() {
 	watch(['app/assets/style/scss/**/*.scss'], styles);
 	watch(['app/assets/js/**/*.js', '!app/assets/js/main.js'], scripts);
 	watch(['app/*.html']).on('change', browserSync.reload);
-	watch(['app/assets/img/icons/svg/*.svg'], svgSprites);
+	watch(['app/assets/img/spriteSvg/unification/*.svg'], svgSprites);
 }
 
 exports.styles = styles;

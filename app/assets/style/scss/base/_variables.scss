@@ -2,18 +2,25 @@
 VARIABLES
 ~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-$color-primary: #0749AA;
+$color-primary: #FF6F61;
+$color-secondary: #383838;
+$color-text: #383838;
+$basick-orange: #FF7D28;
+$basick-green: #58A956;
+$basick-birch: #A0C8E4;
 
 :root {
 	/*font-family*/
-	--fm-1: "Roboto Condensed", sans-serif;
+	--fm-1: "Montserrat", sans-serif;
 
 	/*colors*/
-	--basic-black: #000;
-	--basick-dark: #333;
-	--basick-white: #fff;
-	
 	--color-primary: #{$color-primary};
+	--color-secondary: #{$color-secondary};
+	--color-text: #{$color-text};
+	--basic-black: #000;
+	--basick-orange: #{$basick-orange};
+	--basick-green: #{$basick-green};
+	--basick-birch: #{$basick-birch};
 }
 
 //breakpoints

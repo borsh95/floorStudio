@@ -1,3 +1,10 @@
-/*~~~~~~~~~~~~~~~~~~~~~~~~~
-COMMON BUTTON
-~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*==================== BUTTONS ====================*/
+%base {
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 16px;
+    font-weight: 500;
+	text-align: center;
+}

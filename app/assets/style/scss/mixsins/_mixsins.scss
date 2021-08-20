@@ -40,6 +40,24 @@
     }
 }
 
+@mixin from($min_width){
+    @media screen and (min-width: #{$min_width}px){
+        @content;
+    }
+}
+
+@mixin to($max_width){
+    @media screen and (max-width: #{$min_width}px){
+        @content;
+    }
+}
+
+@mixin from-to($min_width, $max_width){
+    @media screen and (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+        @content;
+    }
+}
+
 @function rubberSize($minW, $maxW, $minScrin, $maxScrin) {
 	@return calc(#{$minW}px + (#{$maxW} - #{$minW})*((100vw - #{$minScrin}px)/(#{$maxScrin} - #{$minScrin})));
 }

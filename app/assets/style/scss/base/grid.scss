@@ -15,6 +15,10 @@
 	}
 }
 
+.col {
+	margin: 0 0 var(--air-b) var(--air-l);
+}
+
 @mixin size($n) {
     width: calc(100% / var(--column) * #{$n} - var(--air-l));
 }
