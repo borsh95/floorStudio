@@ -5,7 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="ArtBro">
-	<title>Главная</title>
+	<title>Главная</title><!-- jandex map -->
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=11c3f48e-5813-4652-88ca-dec2f4df79ee&lang=ru_RU"
+		type="text/javascript">
+		</script>
+	<!-- swiper css -->
+	<link rel="stylesheet" href="./assets/style/css/libraries/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./assets/style/css/style.css">
 </head>
 
@@ -65,6 +70,10 @@
 								</object>
 							</a>
 						</div>
+						<!-- hamburger -->
+						<button class="header__hamburger hamburger" type="button" aria-label="Открыть меню">
+							<span></span>
+						</button>
 					</div>
 					<!-- header bottom -->
 					<div class="header__bottom">
@@ -81,167 +90,97 @@
 											</button>
 											<a class="menu__link" href="#"><span>КАТАЛОГ</span></a>
 											<ul class="menu__submenu">
-												<li class="menu__item active">
-													<span class="menu__link">
-														<span>seo&nbsp;-&nbsp;продвижение</span>
-														<span class="menu__arr">
-															<svg>
-																<use
-																	xlink:href="./assets/img/icons/sprite.svg#arr-down_trian">
-																</use>
-															</svg>
-														</span>
-													</span>
-													<ul class="menu__submenu">
-														<li class="menu__item active">
-															<span class="menu__link"><span>Продвижение в
-																	Яндексе</span></span>
-														</li>
-														<li class="menu__item">
-															<a class="menu__link" href="#"><span>Продвижение в
-																	google</span></a>
-														</li>
-														<li class="menu__item">
-															<a class="menu__link" href="#"><span>комплексное
-																	продвижение</span></a>
-														</li>
-													</ul>
-												</li>
 												<li class="menu__item">
 													<a class="menu__link" href="#">
-														<span>Разработка сайтов</span>
+														<span>Ламинат</span>
 														<span class="menu__arr">
 															<svg>
 																<use
-																	xlink:href="./assets/img/icons/sprite.svg#arr-down_trian">
+																	xlink:href="./assets/img/icons/sprite.svg#arr-tr-right">
 																</use>
 															</svg>
 														</span>
 													</a>
 													<ul class="menu__submenu">
 														<li class="menu__item">
-															<a class="menu__link" href="#"><span>landing page</span></a>
+															<a class="menu__link" href="#">
+																<span>Ламинат Tarkett</span>
+															</a>
 														</li>
 														<li class="menu__item">
-															<a class="menu__link"
-																href="#"><span>интернет-магазин</span></a>
+															<a class="menu__link" href="#">
+																<span> Ламинат Egger</span>
+															</a>
 														</li>
 														<li class="menu__item">
-															<a class="menu__link" href="#"><span>сайт на мodx</span></a>
+															<a class="menu__link" href="#">
+																<span>Ламинат Kastamonu</span>
+															</a>
 														</li>
 														<li class="menu__item">
-															<a class="menu__link" href="#"><span>перенос на другую
-																	cms</span></a>
+															<a class="menu__link" href="#">
+																<span>Ламинат Classen</span>
+															</a>
 														</li>
 														<li class="menu__item">
-															<a class="menu__link" href="#"><span>сайт услуги</span></a>
+															<a class="menu__link" href="#">
+																<span>Ламинат Ideal</span>
+															</a>
+														</li>
+														<li class="menu__item">
+															<a class="menu__link" href="#">
+																<span>Ламинат Quick Step</span>
+															</a>
 														</li>
 													</ul>
 												</li>
 												<li class="menu__item">
 													<a class="menu__link" href="#">
-														<span>Таргетированная реклама</span>
-														<span class="menu__arr">
-															<svg>
-																<use
-																	xlink:href="./assets/img/icons/sprite.svg#arr-down_trian">
-																</use>
-															</svg>
-														</span>
+														<span>Паркетная доска</span>
 													</a>
-													<ul class="menu__submenu">
-														<li class="menu__item">
-															<a class="menu__link" href="#"><span>instagram</span></a>
-														</li>
-														<li class="menu__item">
-															<a class="menu__link" href="#"><span>vk</span></a>
-														</li>
-														<li class="menu__item">
-															<a class="menu__link" href="#"><span>facebook</span></a>
-														</li>
-														<li class="menu__item">
-															<a class="menu__link"
-																href="#"><span>одноклассники</span></a>
-														</li>
-													</ul>
 												</li>
 												<li class="menu__item">
 													<a class="menu__link" href="#">
-														<span>Контекстная реклама</span>
-														<span class="menu__arr">
-															<svg>
-																<use
-																	xlink:href="./assets/img/icons/sprite.svg#arr-down_trian">
-																</use>
-															</svg>
-														</span>
+														<span>Виниловые полы</span>
 													</a>
-													<ul class="menu__submenu">
-														<li class="menu__item">
-															<a class="menu__link" href="#"><span>настройка
-																	веб-аналитики</span></a>
-														</li>
-														<li class="menu__item">
-															<a class="menu__link" href="#"><span>пополнение рекламнных
-																	кабинетов</span></a>
-														</li>
-														<li class="menu__item">
-															<a class="menu__link" href="#"><span>настройка google
-																	merchant
-																	centre</span></a>
-														</li>
-														<li class="menu__item">
-															<a class="menu__link" href="#"><span>Настройкай яндекс
-																	директ</span></a>
-														</li>
-														<li class="menu__item">
-															<a class="menu__link" href="#"><span>настройка google
-																	рекламы</span></a>
-														</li>
-													</ul>
+												</li>
+												<li class="menu__item">
+													<a class="menu__link" href="#">
+														<span>Пробковое покрытие</span>
+													</a>
+												</li>
+												<li class="menu__item">
+													<a class="menu__link" href="#">
+														<span>Штучный паркет</span>
+													</a>
+												</li>
+												<li class="menu__item">
+													<a class="menu__link" href="#">
+														<span>Терассная доска</span>
+													</a>
+												</li>
+												<li class="menu__item">
+													<a class="menu__link" href="#">
+														<span>Дизайнерские полы</span>
+													</a>
+												</li>
+												<li class="menu__item">
+													<a class="menu__link" href="#">
+														<span>Сопутствующие товары</span>
+													</a>
 												</li>
 											</ul>
 										</li>
 										<li class="menu__item">
-											<a class="menu__link" href="#"><span>Производство</span></a>
-										</li>
-										<li class="menu__item active">
-											<span class="menu__link">
-												<span>О нас</span>
-												<span class="menu__arr">
-													<svg>
-														<use xlink:href="./assets/img/icons/sprite.svg#arr-down_trian">
-														</use>
-													</svg>
-												</span>
-											</span>
-											<ul class="menu__submenu">
-												<li class="menu__item">
-													<a class="menu__link" href="#"><span>landing page</span></a>
-												</li>
-												<li class="menu__item">
-													<a class="menu__link" href="#"><span>интернет-магазин</span></a>
-												</li>
-												<li class="menu__item">
-													<a class="menu__link" href="#"><span>сайт на мodx</span></a>
-												</li>
-												<li class="menu__item">
-													<a class="menu__link" href="#"><span>перенос на другую
-															cms</span></a>
-												</li>
-												<li class="menu__item">
-													<a class="menu__link" href="#"><span>сайт услуги</span></a>
-												</li>
-											</ul>
+											<a class="menu__link" href="#"><span>О компании</span></a>
 										</li>
 										<li class="menu__item">
-											<a class="menu__link" href="#"><span>Установка</span></a>
+											<a class="menu__link" href="#">
+												<span>Покупателям</span>
+											</a>
 										</li>
 										<li class="menu__item">
-											<a class="menu__link" href="#"><span>Портфолио</span></a>
-										</li>
-										<li class="menu__item">
-											<a class="menu__link" href="#"><span>Статьи</span></a>
+											<a class="menu__link" href="#"><span>Шоу-Рум</span></a>
 										</li>
 										<li class="menu__item">
 											<a class="menu__link" href="#"><span>Контакты</span></a>
@@ -250,26 +189,874 @@
 								</nav>
 							</div>
 						</div>
+						<div class="header__bottom-col">
+							<!-- button -->
+							<a class="header__callback btn btn--secondary js-openModal" href="#"
+								data-type-modal="application">Дизайнерам</a>
+							<!-- basket btn -->
+							<a class="header__btnBasket btnBasket" href="#">
+								<svg class="btnBasket__ic">
+									<use xlink:href="./assets/img/icons/sprite.svg#basket"></use>
+								</svg>
+								<strong>0</strong>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</header>
-
+		<!------- modal window - application --------->
+		<div class="v-modal" data-type-modal="application">
+			<div class="v-modal__inner">
+				<form class="v-modal__form application-f" action="#">
+					<div class="v-modal__form-inner">
+						<div class="v-modal__close js-closeModal"></div>
+						<h4 class="v-modal__title title-1"><span>Оставить заявку</span></h4>
+						<div class="v-modal__application">
+							<div class="b-input">
+								<div class="b-input__input">
+									<input type="text" name="username" placeholder="Имя">
+								</div>
+							</div>
+							<div class="b-input">
+								<div class="b-input__input">
+									<input type="email" name="email" placeholder="E-mail">
+								</div>
+							</div>
+							<div class="b-input">
+								<div class="b-input__input">
+									<input type="tel" name="tel" placeholder="Телефон">
+								</div>
+							</div>
+							<div class="b-input">
+								<div class="b-input__input">
+									<textarea type="text" name="message" placeholder="Комментарий"></textarea>
+								</div>
+							</div>
+							<button class="application-f__submit btnGo" type="submit" href="#">
+								<span class="btnGo__text">Отправить</span>
+								<span class="btnGo__arrWrap">
+									<svg class="btnGo__arr">
+										<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right">
+										</use>
+									</svg>
+								</span>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- table basket -->
+		<a class="mobile-btnBasket btnBasket btnBasket--circ" href="#">
+			<svg class="btnBasket__ic">
+				<use xlink:href="./assets/img/icons/sprite.svg#basket"></use>
+			</svg>
+			<strong>0</strong>
+		</a>
 		<div class="content-wrap">
 			<!-- MAIN -->
 			<main>
-				<div class="container">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, sed? Enim numquam, perspiciatis harum
-					libero, ducimus distinctio quibusdam culpa perferendis blanditiis, laboriosam doloremque itaque
-					quam. Asperiores eos beatae cum ex?
+				<!-- main slider -->
+				<section class="mainSlider-b">
+					<div class="mainSlider-b__container b-container">
+						<div class="mainSlider-wrap slider-wrap">
+							<div class="mainSlider swiper">
+								<div class="swiper-wrapper">
+									<!-- slide -->
+									<div class="mainSlider__slide swiper-slide">
+										<div class="mainSlider__slide-bg"
+											style="background-image: url(./assets/img/components/main-slider/img-1.jpg)">
+										</div>
+										<div class="mainSlider__slide-container container">
+											<div class="mainSlider__slide-textBox">
+												<h1>Напольные покрытия в Минске</h1>
+												<p>
+													Напольные покрытия, сделанные из проверенного сырья, безопасные для
+													здоровья по сладкой цене для ценителей и эстетов
+												</p>
+												<a class="btnGo" href="#">
+													<span class="btnGo__text">Перейти в каталог</span>
+													<span class="btnGo__arrWrap">
+														<svg class="btnGo__arr">
+															<use
+																xlink:href="./assets/img/icons/sprite.svg#arr-tr-right">
+															</use>
+														</svg>
+													</span>
+												</a>
+											</div>
+										</div>
+									</div>
+									<!-- slide -->
+									<div class="mainSlider__slide swiper-slide">
+										<div class="mainSlider__slide-bg"
+											style="background-image: url(./assets/img/components/main-slider/img-1.jpg)">
+										</div>
+										<div class="mainSlider__slide-container container">
+											<div class="mainSlider__slide-textBox">
+												<h1>Напольные покрытия в Минске</h1>
+												<p>
+													Напольные покрытия, сделанные из проверенного сырья, безопасные для
+													здоровья по сладкой цене для ценителей и эстетов
+												</p>
+												<a class="btnGo" href="#">
+													<span class="btnGo__text">Перейти в каталог</span>
+													<span class="btnGo__arrWrap">
+														<svg class="btnGo__arr">
+															<use
+																xlink:href="./assets/img/icons/sprite.svg#arr-tr-right">
+															</use>
+														</svg>
+													</span>
+												</a>
+											</div>
+										</div>
+									</div>
+									<!-- slide -->
+									<div class="mainSlider__slide swiper-slide">
+										<div class="mainSlider__slide-bg"
+											style="background-image: url(./assets/img/components/main-slider/img-1.jpg)">
+										</div>
+										<div class="mainSlider__slide-container container">
+											<div class="mainSlider__slide-textBox">
+												<h1>Напольные покрытия в Минске</h1>
+												<p>
+													Напольные покрытия, сделанные из проверенного сырья, безопасные для
+													здоровья по сладкой цене для ценителей и эстетов
+												</p>
+												<a class="btnGo" href="#">
+													<span class="btnGo__text">Перейти в каталог</span>
+													<span class="btnGo__arrWrap">
+														<svg class="btnGo__arr">
+															<use
+																xlink:href="./assets/img/icons/sprite.svg#arr-tr-right">
+															</use>
+														</svg>
+													</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- pagination -->
+								<div class="mainSlider__paginationWrap ">
+									<div class="container">
+										<div class="slider-pagination"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- catalog links -->
+				<div class="catalogLinks-b">
+					<div class="catalogLinks-b__container container">
+						<div class="catalogLinks-b__row bCols">
+							<a class="catalogLinks-b__link bCols__col" href="#">
+								<span class="catalogLinks-b__link-bg"
+									style="background-image:url(./assets/img/components/catalogLinks/img-1.jpg)"></span>
+								<span class="catalogLinks-b__link-text">Паркетная доска</span>
+								<svg class="catalogLinks-b__link-arr">
+									<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right"></use>
+								</svg>
+							</a>
+							<a class="catalogLinks-b__link catalogLinks-b__link--small bCols__col" href="#">
+								<span class="catalogLinks-b__link-bg"
+									style="background-image:url(./assets/img/components/catalogLinks/img-2.jpg)"></span>
+								<span class="catalogLinks-b__link-text">Ламинат</span>
+								<svg class="catalogLinks-b__link-arr">
+									<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right"></use>
+								</svg>
+							</a>
+							<a class="catalogLinks-b__link catalogLinks-b__link--small bCols__col" href="#">
+								<span class="catalogLinks-b__link-bg"
+									style="background-image:url(./assets/img/components/catalogLinks/img-3.jpg)"></span>
+								<span class="catalogLinks-b__link-text">Виниловые полы</span>
+								<svg class="catalogLinks-b__link-arr">
+									<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right"></use>
+								</svg>
+							</a>
+							<a class="catalogLinks-b__link bCols__col" href="#">
+								<span class="catalogLinks-b__link-bg"
+									style="background-image:url(./assets/img/components/catalogLinks/img-4.jpg)"></span>
+								<span class="catalogLinks-b__link-text">Пробковые покрытия</span>
+								<svg class="catalogLinks-b__link-arr">
+									<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right"></use>
+								</svg>
+							</a>
+							<a class="catalogLinks-b__link catalogLinks-b__link--small bCols__col" href="#">
+								<span class="catalogLinks-b__link-bg"
+									style="background-image:url(./assets/img/components/catalogLinks/img-5.jpg)"></span>
+								<span class="catalogLinks-b__link-text">Штучный паркет</span>
+								<svg class="catalogLinks-b__link-arr">
+									<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right"></use>
+								</svg>
+							</a>
+							<a class="catalogLinks-b__link bCols__col" href="#">
+								<span class="catalogLinks-b__link-bg"
+									style="background-image:url(./assets/img/components/catalogLinks/img-6.jpg)"></span>
+								<span class="catalogLinks-b__link-text">Дизайнерские полы</span>
+								<svg class="catalogLinks-b__link-arr">
+									<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right"></use>
+								</svg>
+							</a>
+							<a class="catalogLinks-b__link bCols__col" href="#">
+								<span class="catalogLinks-b__link-bg"
+									style="background-image:url(./assets/img/components/catalogLinks/img-7.jpg)"></span>
+								<span class="catalogLinks-b__link-text">Сопутствующие товары</span>
+								<svg class="catalogLinks-b__link-arr">
+									<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right"></use>
+								</svg>
+							</a>
+							<a class="catalogLinks-b__link catalogLinks-b__link--small bCols__col" href="#">
+								<span class="catalogLinks-b__link-bg"
+									style="background-image:url(./assets/img/components/catalogLinks/img-8.jpg)"></span>
+								<span class="catalogLinks-b__link-text">Террасная доска</span>
+								<svg class="catalogLinks-b__link-arr">
+									<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
 				</div>
+				<!-- products slider -->
+				<section class="productsSlider-b section">
+					<div class="productsSlider-b__container container">
+						<h2 class="title-1 section__title">
+							<span>Популярные товары</span>
+						</h2>
+						<div class="slider-wrap">
+							<div class="productsSlider swiper">
+								<div class="swiper-wrapper">
+									<!-- card -->
+									<div class="productsSlider__slide productCard swiper-slide">
+										<div class="productLabels">
+											<div class="productLabel productLabel--stock">
+												акция
+											</div>
+											<div class="productLabel">
+												хит
+											</div>
+										</div>
+										<a href="#" class="productCard__img">
+											<img src="./assets/img/components/productsSlider/img-1.jpg"
+												alt="Какой-то текст">
+										</a>
+										<div class="productCard__textBox">
+											<div class="productCard__availabilityWrap">
+												<div>Adventure</div>
+												<div class="availability-label availability-label--available">В наличии
+												</div>
+											</div>
+											<div class="productCard__name">
+												Ламинат Classen Дуб Андерсон
+											</div>
+											<div class="productCard__desc">
+												<div class="productCard__desc-item">
+													Производитель: <span>Classen</span>
+												</div>
+												<div class="productCard__desc-item">
+													Класс износостойкости: <span>32</span>
+												</div>
+												<div class="productCard__desc-item">
+													Фаска: <span>4-сторонняя фаска</span>
+												</div>
+												<div class="productCard__desc-item">
+													Древесина: <span>дуб</span>
+												</div>
+											</div>
+											<div class="productCard__price">
+												<span class="productCard__price-val" data-prefix="от" data-postfix="*">
+													42 000 руб.
+												</span>
+											</div>
+											<div class="productCard__btns">
+												<a class="productCard__toBasket btn btn--light" href="#">В корзину</a>
+												<a class="productCard__buy btn" href="#">Купить</a>
+											</div>
+										</div>
+									</div>
+									<!-- card -->
+									<div class="productsSlider__slide productCard swiper-slide">
+										<div class="productLabels">
+											<div class="productLabel productLabel--stock">
+												акция
+											</div>
+											<div class="productLabel">
+												хит
+											</div>
+										</div>
+										<a href="#" class="productCard__img">
+											<img src="./assets/img/components/productsSlider/img-2.jpg"
+												alt="Какой-то текст">
+										</a>
+										<div class="productCard__textBox">
+											<div class="productCard__availabilityWrap">
+												<div>Adventure</div>
+												<div class="availability-label availability-label--find">Уточняйте</div>
+											</div>
+											<div class="productCard__name">
+												Ламинат Classen Дуб Андерсон
+											</div>
+											<div class="productCard__desc">
+												<div class="productCard__desc-item">
+													Производитель: <span>Classen</span>
+												</div>
+												<div class="productCard__desc-item">
+													Класс износостойкости: <span>32</span>
+												</div>
+												<div class="productCard__desc-item">
+													Фаска: <span>4-сторонняя фаска</span>
+												</div>
+												<div class="productCard__desc-item">
+													Древесина: <span>дуб</span>
+												</div>
+											</div>
+											<div class="productCard__price">
+												<span class="productCard__price-val" data-prefix="от" data-postfix="*">
+													42 000 руб.
+												</span>
+											</div>
+											<div class="productCard__btns">
+												<a class="productCard__toBasket btn btn--light" href="#">В корзину</a>
+												<a class="productCard__buy btn" href="#">Купить</a>
+											</div>
+										</div>
+									</div>
+									<!-- card -->
+									<div class="productsSlider__slide productCard swiper-slide">
+										<div class="productLabels">
+											<div class="productLabel productLabel--stock">
+												акция
+											</div>
+											<div class="productLabel">
+												хит
+											</div>
+										</div>
+										<a href="#" class="productCard__img">
+											<img src="./assets/img/components/productsSlider/img-3.jpg"
+												alt="Какой-то текст">
+										</a>
+										<div class="productCard__textBox">
+											<div class="productCard__availabilityWrap">
+												<div>Adventure</div>
+												<div class="availability-label availability-label--no">Нет в наличии
+												</div>
+											</div>
+											<div class="productCard__name">
+												Ламинат Classen Дуб Андерсон
+											</div>
+											<div class="productCard__desc">
+												<div class="productCard__desc-item">
+													Производитель: <span>Classen</span>
+												</div>
+												<div class="productCard__desc-item">
+													Класс износостойкости: <span>32</span>
+												</div>
+												<div class="productCard__desc-item">
+													Фаска: <span>4-сторонняя фаска</span>
+												</div>
+												<div class="productCard__desc-item">
+													Древесина: <span>дуб</span>
+												</div>
+											</div>
+											<div class="productCard__price">
+												<span class="productCard__price-val" data-prefix="от" data-postfix="*">
+													42 000 руб.
+												</span>
+											</div>
+											<div class="productCard__btns">
+												<a class="productCard__toBasket btn btn--light" href="#">В корзину</a>
+												<a class="productCard__buy btn" href="#">Купить</a>
+											</div>
+										</div>
+									</div>
+									<!-- card -->
+									<div class="productsSlider__slide productCard swiper-slide">
+										<div class="productLabels">
+											<div class="productLabel productLabel--stock">
+												акция
+											</div>
+											<div class="productLabel">
+												хит
+											</div>
+										</div>
+										<a href="#" class="productCard__img">
+											<img src="./assets/img/components/productsSlider/img-1.jpg"
+												alt="Какой-то текст">
+										</a>
+										<div class="productCard__textBox">
+											<div class="productCard__availabilityWrap">
+												<div>Adventure</div>
+												<div class="availability-label availability-label--available">В наличии
+												</div>
+											</div>
+											<div class="productCard__name">
+												Ламинат Classen Дуб Андерсон
+											</div>
+											<div class="productCard__desc">
+												<div class="productCard__desc-item">
+													Производитель: <span>Classen</span>
+												</div>
+												<div class="productCard__desc-item">
+													Класс износостойкости: <span>32</span>
+												</div>
+												<div class="productCard__desc-item">
+													Фаска: <span>4-сторонняя фаска</span>
+												</div>
+												<div class="productCard__desc-item">
+													Древесина: <span>дуб</span>
+												</div>
+											</div>
+											<div class="productCard__price">
+												<span class="productCard__price-val" data-prefix="от" data-postfix="*">
+													42 000 руб.
+												</span>
+											</div>
+											<div class="productCard__btns">
+												<a class="productCard__toBasket btn btn--light" href="#">В корзину</a>
+												<a class="productCard__buy btn" href="#">Купить</a>
+											</div>
+										</div>
+									</div>
+									<!-- card -->
+									<div class="productsSlider__slide productCard swiper-slide">
+										<div class="productLabels">
+											<div class="productLabel productLabel--stock">
+												акция
+											</div>
+											<div class="productLabel">
+												хит
+											</div>
+										</div>
+										<a href="#" class="productCard__img">
+											<img src="./assets/img/components/productsSlider/img-2.jpg"
+												alt="Какой-то текст">
+										</a>
+										<div class="productCard__textBox">
+											<div class="productCard__availabilityWrap">
+												<div>Adventure</div>
+												<div class="availability-label availability-label--find">Уточняйте</div>
+											</div>
+											<div class="productCard__name">
+												Ламинат Classen Дуб Андерсон
+											</div>
+											<div class="productCard__desc">
+												<div class="productCard__desc-item">
+													Производитель: <span>Classen</span>
+												</div>
+												<div class="productCard__desc-item">
+													Класс износостойкости: <span>32</span>
+												</div>
+												<div class="productCard__desc-item">
+													Фаска: <span>4-сторонняя фаска</span>
+												</div>
+												<div class="productCard__desc-item">
+													Древесина: <span>дуб</span>
+												</div>
+											</div>
+											<div class="productCard__price">
+												<span class="productCard__price-val" data-prefix="от" data-postfix="*">
+													42 000 руб.
+												</span>
+											</div>
+											<div class="productCard__btns">
+												<a class="productCard__toBasket btn btn--light" href="#">В корзину</a>
+												<a class="productCard__buy btn" href="#">Купить</a>
+											</div>
+										</div>
+									</div>
+									<!-- card -->
+									<div class="productsSlider__slide productCard swiper-slide">
+										<div class="productLabels">
+											<div class="productLabel productLabel--stock">
+												акция
+											</div>
+											<div class="productLabel">
+												хит
+											</div>
+										</div>
+										<a href="#" class="productCard__img">
+											<img src="./assets/img/components/productsSlider/img-3.jpg"
+												alt="Какой-то текст">
+										</a>
+										<div class="productCard__textBox">
+											<div class="productCard__availabilityWrap">
+												<div>Adventure</div>
+												<div class="availability-label availability-label--no">Нет в наличии
+												</div>
+											</div>
+											<div class="productCard__name">
+												Ламинат Classen Дуб Андерсон
+											</div>
+											<div class="productCard__desc">
+												<div class="productCard__desc-item">
+													Производитель: <span>Classen</span>
+												</div>
+												<div class="productCard__desc-item">
+													Класс износостойкости: <span>32</span>
+												</div>
+												<div class="productCard__desc-item">
+													Фаска: <span>4-сторонняя фаска</span>
+												</div>
+												<div class="productCard__desc-item">
+													Древесина: <span>дуб</span>
+												</div>
+											</div>
+											<div class="productCard__price">
+												<span class="productCard__price-val" data-prefix="от" data-postfix="*">
+													42 000 руб.
+												</span>
+											</div>
+											<div class="productCard__btns">
+												<a class="productCard__toBasket btn btn--light" href="#">В корзину</a>
+												<a class="productCard__buy btn" href="#">Купить</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- company description -->
+				<section class="companyDesc-b section">
+					<div class="companyDesc-b__container container">
+						<h2 class="title-1 section__title"><span>FLOORSTUDIO - ЭТО</span></h2>
+						<div class="companyDesc-b__list">
+							<!-- item -->
+							<article class="companyDesc-b__item">
+								<div class="companyDesc-b__itemRow">
+									<div class="companyDesc-b__itemTextBox text--lg">
+										<h3>Проверенные материалы</h3>
+										<p>
+											Напольные покрытия, сделанные из проверенного сырья, безопасные для здоровья
+											по
+											сладкой цене для ценителей и эстетов
+										</p>
+									</div>
+									<div class="companyDesc-b__itemImgBox">
+										<div class="companyDesc-b__itemImg">
+											<img src="./assets/img/components/companyDesc/img-1.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</article>
+							<!-- item -->
+							<article class="companyDesc-b__item">
+								<div class="companyDesc-b__itemRow">
+									<div class="companyDesc-b__itemTextBox text--lg">
+										<h3>Профессиональная помощь</h3>
+										<p>
+											Мы не просто продаем ради денег, мы советуем и помогаем купить надежность и
+											комфорт, которая прослужит много лет и будет радовать Вас и всех Ваших
+											гостей
+										</p>
+									</div>
+									<div class="companyDesc-b__itemImgBox">
+										<div class="companyDesc-b__itemImg">
+											<img src="./assets/img/components/companyDesc/img-2.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</article>
+							<!-- item -->
+							<article class="companyDesc-b__item">
+								<div class="companyDesc-b__itemRow">
+									<div class="companyDesc-b__itemTextBox text--lg">
+										<h3>Индивидуальный подход</h3>
+										<p>
+											Мы подберем именно "тот самый оттенок" и "по лучшей цене" с доставкой, дадим
+											образцы на дом и будем поддерживать с Вами связь на протяжении всех этапо
+										</p>
+									</div>
+									<div class="companyDesc-b__itemImgBox">
+										<div class="companyDesc-b__itemImg">
+											<img src="./assets/img/components/companyDesc/img-3.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>
+				<!-- reviews block -->
+				<section class="reviews-b section">
+					<div class="reviews-b__container container">
+						<h2 class="title-1 section__title"><span>Отзывы наших клиентов</span></h2>
+						<div class="reviews-b__row">
+							<!-- reviews card -->
+							<div class="reviewsCard">
+								<div class="reviewsCard__row">
+									<div class="reviewsCard__imgBox">
+										<div class="reviewsCard__img">
+											<img src="./assets/img/logo.png" alt="">
+										</div>
+										<div class="reviewsCard__requesites">
+											Татьяна, Минск
+										</div>
+									</div>
+									<div class="reviewsCard__textBox">
+										Была в шоу-руме на Уручье, как раз попала на его открытие.
+										Хотела приобрести ламинат, но милый менеджер настолько была убедительной, что
+										мой
+										выбор просто остановился на виниловой плитке. И цвет, и фактура, и цена - все
+										оказалось очень красивым, но милый менеджер настолько была убедительной, что мой
+										выбор просто остановился на виниловой плитке. И цвет, и фактура, и цена - все
+										оказалось очень красивым.
+									</div>
+								</div>
+								<a class="reviewsCard__more btnArr" href="#">
+									<svg>
+										<use xlink:href="./assets/img/icons/sprite.svg#arr-circ-right"></use>
+									</svg>
+								</a>
+							</div>
+							<!-- reviews card -->
+							<div class="reviewsCard">
+								<div class="reviewsCard__row">
+									<div class="reviewsCard__imgBox">
+										<div class="reviewsCard__img">
+											<img src="./assets/img/logo.png" alt="">
+										</div>
+										<div class="reviewsCard__requesites">
+											Татьяна, Минск
+										</div>
+									</div>
+									<div class="reviewsCard__textBox">
+										Была в шоу-руме на Уручье, как раз попала на его открытие.
+										Хотела приобрести ламинат, но милый менеджер настолько была убедительной, что
+										мой
+										выбор просто остановился на виниловой плитке. И цвет, и фактура, и цена - все
+										оказалось очень красивым, но милый менеджер настолько была убедительной, что мой
+										выбор просто остановился на виниловой плитке. И цвет, и фактура, и цена - все
+										оказалось очень красивым.
+									</div>
+								</div>
+								<a class="reviewsCard__more btnArr" href="#">
+									<svg>
+										<use xlink:href="./assets/img/icons/sprite.svg#arr-circ-right"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<a class="reviews-b__more btnGo" href="#">
+							<span class="btnGo__text">Смотреть отзывы</span>
+							<span class="btnGo__arrWrap">
+								<svg class="btnGo__arr">
+									<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right">
+									</use>
+								</svg>
+							</span>
+						</a>
+					</div>
+				</section>
+				<section class="application-b section">
+					<div class="application-b__container container">
+						<h2 class="title-1 section__title"><span>Оставить заявку</span></h2>
+						<div class="application-b__row">
+							<!-- form -->
+							<form class="application-b__application-f application-f">
+								<div class="b-input">
+									<div class="b-input__input">
+										<input type="text" name="username" placeholder="Имя">
+									</div>
+								</div>
+								<div class="b-input">
+									<div class="b-input__input">
+										<input type="tel" name="tel" placeholder="Телефон">
+									</div>
+								</div>
+								<div class="b-input">
+									<div class="b-input__input">
+										<textarea type="text" name="message" placeholder="Комментарий"></textarea>
+									</div>
+								</div>
+								<button class="application-f__submit btnGo" type="submit" href="#">
+									<span class="btnGo__text">Отправить</span>
+									<span class="btnGo__arrWrap">
+										<svg class="btnGo__arr">
+											<use xlink:href="./assets/img/icons/sprite.svg#arr-tr-right">
+											</use>
+										</svg>
+									</span>
+								</button>
+							</form>
+							<!-- map -->
+							<div class="application-b__map map" id="map">
+								<iframe src="https://yandex.by/map-widget/v1/-/CCUezHUt0A" frameborder="1"
+									allowfullscreen="true" style="position: absolute; inset: 0;"></iframe>
+							</div>
+						</div>
+
+					</div>
+				</section>
 			</main>
 		</div>
 		<!-- FOOTER -->
-		<div class="footer">
-
-		</div>
+		<footer>
+			<!-- footer top -->
+			<div class="footer__top">
+				<div class="footer__top-container container">
+					<!-- footer top row -->
+					<div class="footer__top-row bCols">
+						<!-- col -->
+						<div class="footer__top-col bCols__col">
+							<div class="footer__company">
+								<!-- logo -->
+								<a class="footer__logo logo" href="#">
+									<img src="./assets/img/logo@light.png" alt="logo">
+								</a>
+								<p>
+									ООО «Валлия Компани» <br>
+									220141, г. Минск, <br>
+									пр. Независимости 168/3, пом. 9Н <br>
+									УНП 193448288
+								</p>
+							</div>
+							<p>
+								Информация, представленная на сайте, не является договором публичной оферты
+							</p>
+							<!-- sci -->
+							<p class="footer__sci sci">
+								<a class="sci__link sci__link--tel" href="tel:+375296064910">
+									<svg>
+										<use xlink:href="./assets/img/icons/sprite.svg#sci__phone"></use>
+									</svg>
+								</a>
+								<a class="sci__link sci__link--tg" href="https://msngr.link/tg/375296064910">
+									<svg>
+										<use xlink:href="./assets/img/icons/sprite.svg#sci__tg"></use>
+									</svg>
+								</a>
+								<a class="sci__link sci__link--viber" href="https://msngr.link/vi/375296064910">
+									<svg>
+										<use xlink:href="./assets/img/icons/sprite.svg#sci__viber"></use>
+									</svg>
+								</a>
+								<a class="sci__link sci__link--phone" href="tel:+375296064910">
+									+375&nbsp;29&nbsp;606&nbsp;49&nbsp;10
+								</a>
+							</p>
+						</div>
+						<div class="footer__top-col bCols__col">
+							<ul class="footer__category">
+								<li>
+									<a href="#">Ламинат</a>
+								</li>
+								<li>
+									<a href="#">Паркетная доска</a>
+								</li>
+								<li>
+									<a href="#">Виниловые полы</a>
+								</li>
+								<li>
+									<a href="#">Пробковые покрытия</a>
+								</li>
+								<li>
+									<a href="#">Штучный паркет</a>
+								</li>
+								<li>
+									<a href="#">Террасная доска</a>
+								</li>
+								<li>
+									<a href="#">Дизайнерские полы</a>
+								</li>
+								<li>
+									<a href="#">Сопутствующие товары</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__top-col bCols__col">
+							<!-- footer menu -->
+							<ul class="footer__menu	menu">
+								<li class="menu__item">
+									<a class="menu__link" href="#"><span>Каталог</span></a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#"><span>О компании</span></a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#">
+										<span>Покупателям</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#"><span>Шоу-Рум</span></a>
+								</li>
+								<li class="menu__item">
+									<a class="menu__link" href="#"><span>Контакты</span></a>
+								</li>
+							</ul>
+							<!-- footer links -->
+							<ul class="footer__links">
+								<li><a href="#">Оплата</a></li>
+								<li><a href="#">Доставка</a></li>
+								<li><a href="#">Рассрочка</a></li>
+								<li><a href="#">Замена и возврат товара</a></li>
+								<li><a href="#">Вопрос-Ответ</a></li>
+							</ul>
+							<!-- footer firm indormation -->
+							<div class="footer__firmInfoBox">
+								<!-- firm info -->
+								<div class="firm-info firm-info firm-info--work">
+									<img class="firm-info__ic" src="./assets/img/components/firm-ic/firm-ic__by.png"
+										alt="">
+									Работаем по всей Беларуси
+								</div>
+								<!-- firm info -->
+								<div class="firm-info firm-info--loc">
+									<svg class="firm-info__ic">
+										<use xlink:href="./assets/img/components/firm-ic/sprite.svg#firm-info__loc">
+										</use>
+									</svg>
+									Минск пр. Независимости 168/3
+								</div>
+								<!-- firm info -->
+								<div class="firm-info firm-info--mail">
+									<svg class="firm-info__ic">
+										<use xlink:href="./assets/img/components/firm-ic/sprite.svg#firm-info__mail">
+										</use>
+									</svg>
+									<a href="mailto:floorstudio.by@gmail.com">floorstudio.by@gmail.com</a>
+								</div>
+								<!-- firm info -->
+								<div class="firm-info firm-info--clock">
+									<svg class="firm-info__ic">
+										<use xlink:href="./assets/img/components/firm-ic/sprite.svg#firm-info__clock">
+										</use>
+									</svg>
+									пн-пт: 10.00-20.00, сб-вс: 10.00-18.00
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- sci links -->
+					<div class="footer__sciLinks">
+						<a class="sci-link" target="_blank" href="#">
+							<object type="image/svg+xml" data="./assets/img/icons/sprite.svg#insta">
+							</object>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- footer bottom -->
+			<div class="footer__bottom">
+				<div class="footer__bottom-container container">
+					<p class="footer__copyright">&copy; 2020 FLOORSTUDIO</p>
+					<a class="ArtBro" href="https://cweb.by/" target="_blank">
+						Разработка и продвижение cweb
+					</a>
+				</div>
+			</div>
+		</footer>
 	</div>
+	<!-- inputMask -->
+	<script src="./assets/js/libraries/inputMask.min.js"></script>
+	<!-- swiper js -->
+	<script src="assets/js/libraries/swiper-bundle.min.js"></script>
+	<!-- main js -->
 	<script src="assets/js/main.js"></script>
 </body>
 

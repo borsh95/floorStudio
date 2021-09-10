@@ -5,6 +5,231 @@
 	align-items: center;
 	justify-content: center;
 	padding: 0 16px;
-    font-weight: 500;
+	font-weight: 500;
 	text-align: center;
+}
+
+%baseView {
+	--height: 40px;
+	--fz: 14px;
+	--colorText: #fff;
+	--colorTone: var(--color-primary);
+	height: var(--height);
+	font-size: var(--fz);
+	color: var(--colorText);
+	background-color: var(--colorTone);
+}
+
+.btn {
+	@extend %base;
+	@extend %baseView;
+	font-weight: 500;
+	line-height: (20/16);
+	border-radius: 50px;
+	transition: all $duration;
+
+	&:hover {
+		--colorTone: var(--color-secondary);
+	}
+
+	&--secondary {
+		--colorTone: var(--color-secondary);
+
+		&:hover {
+			--colorTone: var(--color-primary);
+		}
+	}
+
+	&--light {
+		--colorTone: #f5f4f4;
+		--colorText: #7d7d7d;
+
+		&:hover {
+			--colorTone: var(--color-primary-lig);
+		}
+	}
+}
+
+.btnGo {
+	@extend %base;
+	@extend %baseView;
+	--height: 50px;
+	--fz: 16px;
+	--colorTone: var(--color-secondary);
+	padding: 0;
+	min-width: 250px;
+	border-radius: 60px;
+	overflow: hidden;
+	transition: background-color $duration;
+
+	&__text {
+		margin: 0 auto;
+		padding: 0 getEm(11, 16) 0 getEm(24, 16);
+	}
+
+	&__arrWrap {
+		flex-shrink: 0;
+		display: inline-flex;
+		align-items: center;
+		margin-right: -1px;
+		height: 100%;
+		width: getEm(56, 16);
+		background-color: var(--color-primary);
+	}
+
+	&__arr {
+		margin: 0 auto;
+		width: getEm(11.5, 16);
+		height: getEm(21, 16);
+		fill: #fff;
+	}
+
+	&:hover {
+		background-color: var(--color-primary);
+	}
+}
+
+.btnArr {
+	--color-border: var(--color-primary);
+	--color-arr: var(--color-primary);
+	@extend %base;
+	padding: 0;
+	width: 31px;
+	height: 31px;
+	fill: transparent;
+	transition: all $duration;
+
+	svg {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	&:hover {
+		--color-arr: #fff;
+		fill: var(--color-primary);
+	}
+}
+
+.btnBasket {
+	@extend %base;
+	position: relative;
+	padding: 0;
+
+	&__ic {
+		flex-shrink: 0;
+		display: block;
+		width: 37px;
+		height: 31px;
+		fill: var(--color-primary);
+	}
+
+	strong {
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 1;
+		color: #c4c4c4;
+	}
+
+	&--circ {
+		width: 65px;
+		height: 65px;
+		background-color: var(--color-primary);
+		border-radius: 50%;
+		transition: all $duration;
+
+		.btnBasket__ic {
+			margin: 0 0 -6px -6px;
+			fill: #fff;
+			transition: all $duration;
+		}
+
+		strong {
+			top: 12px;
+			right: 11px;
+			font-size: 12px;
+			color: #fff;
+			transition: all $duration;
+		}
+
+		&:hover {
+			background-color: #fff;
+			box-shadow: 0px 0px 20px rgba(255, 111, 97, 0.34);
+
+			.btnBasket__ic {
+				fill: var(--color-primary);
+			}
+
+			strong {
+				color: var(--color-primary);
+			}
+		}
+	}
+}
+
+/*v-up*/
+.v-up {
+	cursor: pointer;
+	position: fixed;
+	right: 30px;
+	bottom: 155px;
+	z-index: 250;
+	width: 80px;
+	height: 80px;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 0px 0px 20px rgba(255, 111, 97, 0.34);
+	opacity: 0;
+	pointer-events: none;
+	transition: background-color $duration, opacity $duration;
+
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	&:hover {
+		background-color: var(--color-primary);
+
+		&::before,
+		&::after {
+			background-color: #fff;
+		}
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 60%;
+		left: 40%;
+		width: 35%;
+		height: 7%;
+		background-color: var(--color-primary);
+		transition: background-color $duration;
+	}
+
+	&::before {
+		border-radius: 0px 3px 3px 0;
+		transform-origin: right top;
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		margin-left: -15.4%;
+		border-radius: 3px 0 0 3px;
+		transform-origin: left top;
+		transform: rotate(-45deg);
+	}
+
+	@include desctop-min {
+		width: 65px;
+		height: 65px;
+	}
+
+	@include mobile {
+		right: 20px;
+	}
 }

@@ -91,6 +91,7 @@ function stylesBuild() {
 	return src('app/assets/style/scss/main.scss')
 		.pipe(scss(/*{ outputStyle: 'compressed' }*/))
 		.pipe(concat('style.css'))
+		.pipe(gcmq())
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 5 version'],
 			grid: true

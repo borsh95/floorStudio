@@ -3,17 +3,16 @@ FONT FAMILY
 ~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @mixin font-face($font-family, $weight, $url, $file-name) {
 	@font-face {
-		font-family: '#{$font-family}';
-		src: url('#{$url}#{$file-name}.woff2') format('woff2'),
-		url('#{$url}#{$file-name}.woff') format('woff');
+		font-family: "#{$font-family}";
+		src: url("#{$url}#{$file-name}.woff2") format("woff2"), url("#{$url}#{$file-name}.woff") format("woff");
 		font-weight: #{$weight};
 		font-display: swap;
 		font-style: normal;
 	}
 }
 
-@include font-face(Montserrat, 400, './../../fonts/', Montserrat-Regular);
-@include font-face(Montserrat, 500, './../../fonts/', Montserrat-Medium);
-@include font-face(Montserrat, 600, './../../fonts/', Montserrat-SemiBold);
-@include font-face(Montserrat, 700, './../../fonts/', Montserrat-Bold);
-
+@include font-face(Montserrat, 300, "./../../fonts/", Montserrat-Light);
+@include font-face(Montserrat, 400, "./../../fonts/", Montserrat-Regular);
+@include font-face(Montserrat, 500, "./../../fonts/", Montserrat-Medium);
+@include font-face(Montserrat, 600, "./../../fonts/", Montserrat-SemiBold);
+@include font-face(Montserrat, 700, "./../../fonts/", Montserrat-Bold);

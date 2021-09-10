@@ -47,7 +47,7 @@
 }
 
 @mixin to($max_width){
-    @media screen and (max-width: #{$min_width}px){
+    @media screen and (max-width: #{$max_width}px){
         @content;
     }
 }

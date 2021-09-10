@@ -3,11 +3,10 @@
 header {
 	position: relative;
 	z-index: 10;
-	padding-top: 11px;
 	background-color: #fff;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 
-    &.fixed {
+	&.fixed {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -15,9 +14,9 @@ header {
 		width: 100%;
 		animation: anim 0.5s;
 
-        @include table {
-            padding: 10px 0;
-        }
+		@include table {
+			padding: 10px 0;
+		}
 	}
 
 	@keyframes anim {
@@ -39,16 +38,19 @@ header {
 
 	&__aside {
 		display: flex;
+		flex-shrink: 0;
 	}
 
 	&__body {
 		flex: 1;
 		margin-left: getPr(53, 1170);
+		padding-top: 11px;
 	}
 
 	/*logo*/
 	&__logo {
 		margin: auto;
+		padding: 10px 0;
 		max-width: 116px;
 	}
 
@@ -57,7 +59,7 @@ header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-bottom: 12.5px;
+		padding-bottom: 15px;
 		font-size: 14px;
 	}
 
@@ -79,17 +81,25 @@ header {
 
 	/*header bottom*/
 	&__bottom {
+		display: flex;
 		.sci-link {
 			display: none;
 			margin-left: auto;
 			width: 34px;
 			height: 34px;
-			border: 0.5px solid #F4F3F3;
+			border: 0.5px solid #f4f3f3;
 
 			svg {
 				margin: 0 auto;
 				max-width: getPr(20, 34);
 			}
+		}
+
+		&-col {
+			display: flex;
+			align-items: center;
+			margin-left: auto;
+			margin-top: -13px;
 		}
 	}
 
@@ -97,81 +107,88 @@ header {
 		overflow: visible;
 	}
 
+	&__callback {
+		--height: #{getEm(38, 16)};
+		--fz: 16px;
+		min-width: getEm(195, 16);
+	}
+
+	&__btnBasket {
+		flex-shrink: 0;
+		margin-left: 30px;
+	}
+
 	&__hamburger {
 		display: none;
-		height: 34px;
-		width: 34px;
+		margin-left: 40px;
+		height: 31px;
+		width: 31px;
 		color: var(--basick-white);
 		background-color: var(--color-primary);
+		border-radius: 50%;
+		transform: scale(1.2);
 
 		span {
 			left: 50%;
-			width: getPr(23, 34);
+			width: getPr(18, 31);
 			transform: translateX(-50%);
+
+			&::before {
+				top: -6px;
+			}
+
+			&::after {
+				bottom: -6px;
+			}
 		}
 
-		&.active span{
+		&.active span {
 			transform: translateX(-50%) rotate(90deg);
 		}
 	}
 
-	@include table{
-		&__top {
-			padding-left: 0;
-
+	@include from($desctop-min + 1) {
+		@at-root header .menu > li > ul {
+			/*имитация тени шапки над выпадающим списком*/
 			&::before {
-				display: none;
+				content: "";
+				position: absolute;
+				right: -10px;
+				bottom: 100%;
+				left: -10px;
+				z-index: 1;
+				display: block;
+				height: 13px;
+				background-color: #fff;
 			}
 		}
+	}
 
-		&__firm-info {
+	@include desctop-min {
+		&__firm-info,
+		&__bottom-col,
+		&__sciLinks {
 			display: none;
 		}
 
+		&__top {
+			padding-bottom: 0;
+		}
+
+		&__body {
+			padding-top: 0;
+		}
+
 		&__logo {
-			position: static;
-			max-width: 152px;
+			max-width: 80px;
 		}
 
-		&__bottom {
-			position: relative;
-
-			.sci-link {
-				display: block;
-			}
+		&__hamburger {
+			display: block;
 		}
 
-		&__search {
-			position: absolute;
-			left: 0;
-			top: 0;
-			z-index: -1;
-			width: 100%;
-			height: 100%;
-			opacity: 0;
-			pointer-events: none;
-			transition: opacity $duration, z-index 0s $duration;
-
-			&.active {
-				z-index: 5;
-				opacity: 1;
-				pointer-events: all;
-				transition: opacity $duration, z-index 0s;
-			}
-
-			.search {
-				&__inner {
-					border-radius: 0;
-				}
-
-				&__btn {
-					display: none;
-				}
-
-				&__close {
-					display: inline-block;
-				}
-			}
+		&__sci {
+			margin-left: auto;
 		}
 
 		&__burger {
@@ -180,7 +197,6 @@ header {
 			z-index: 999;
 			width: 100%;
 			background-color: var(--basick-white);
-			box-shadow: inset 0px 20px 20px -20px rgba(48, 130, 255, 0.5);
 			box-shadow: inset 0px 20px 20px -20px rgba(0, 0, 0, 0.1);
 			transition: transform 0.2s;
 
@@ -214,6 +230,7 @@ header {
 			/*bro menu*/
 			.bro-menu {
 				$indetForBtn: 1em;
+				font-size: 16px;
 
 				ul {
 					width: 100%;
@@ -246,12 +263,12 @@ header {
 					}
 				}
 
-				&__next ,
+				&__next,
 				&__back {
 					svg {
 						flex-shrink: 0;
 						display: block;
-						width: 10px;
+						width: 13px;
 					}
 				}
 
@@ -261,7 +278,6 @@ header {
 
 				&__back {
 					background-color: var(--color-primary) !important;
-					font-size: 14px !important;
 					color: var(--basick-white);
 
 					svg {
@@ -292,28 +308,32 @@ header {
 		}
 	}
 
-	@include mobile {
-		&__top {
-			justify-content: start;
-			font-size: 9px;
-
-			.sci:first-child {
-				margin-right: 28px;
-			}
-
-			.sci {
-				&__link {
-					margin-left: 3px;
-
-					svg {
-						width: 17px;
-						height: 17px;
-					}
-				}
-			}
+	@include desctop-min {
+		@at-root header {
+			padding: 10px 0;
 		}
-		&__sci-linksGroup {
-			display: none;
+
+		&__logo {
+			padding: 0;
+		}
+	}
+
+	@include mobile {
+		@at-root header {
+			padding: 8px 0;
+		}
+
+		&__logo {
+			max-width: 54px;
+		}
+		&__hamburger {
+			margin-left: 28px;
+			transform: scale(1);
+		}
+		&__sci {
+			.sci__link--phone {
+				display: none;
+			}
 		}
 	}
 }
@@ -325,32 +345,42 @@ header {
 	z-index: 1;
 	display: flex;
 	align-items: center;
-	font-size: 12px;
+	font-size: 16px;
 
+	/*1-ый уровень, не скрытый, горизонтальный*/
 	& > &__item {
 		position: relative;
 		margin-right: 10px;
-		text-transform: uppercase;
+
+		&:first-child {
+			padding-left: 0;
+		}
 
 		&:last-child {
 			margin-right: 0;
+			padding-right: 0;
 		}
 
 		& > #{$this}__link {
 			position: relative;
 			display: inline-flex;
-			padding: 15px 5px 18px;
-			line-height: (15/12);
+			padding: 15px 10px 28px;
+			line-height: (20/16);
 			white-space: nowrap;
+			text-transform: uppercase;
 			transition: all $duration;
+
+			& > #{$this}__arr {
+				svg {
+					transform: rotate(90deg);
+				}
+			}
 		}
 
 		&:hover,
 		&.active {
 			& > .menu__link {
 				color: var(--color-primary);
-				text-shadow: 0.05px 0.05px 0 var(--color-primary),
-							-0.05px -0.05px 0 var(--color-primary);
 			}
 		}
 
@@ -358,40 +388,27 @@ header {
 			transform: scaleY(-1);
 		}
 	}
+	/***********************************/
 
-	@include from($table) {
-
+	@include from($desctop-min + 1) {
+		/*Все вложенные списки в меню, скрытые, вертикальные*/
 		ul {
 			position: absolute;
 			padding: 14px 0;
 			min-width: 300px;
 			max-width: 340px;
 			background-color: var(--basick-white);
-			border-radius: 0px 0px 5px 5px;
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13),
-						inset 0px 20px 20px -20px rgba(0, 0, 0, 0.1);
+			box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05), inset 0px 20px 20px -20px rgba(0, 0, 0, 0.1);
 			opacity: 0;
 			pointer-events: none;
 			transition: opacity $duration;
-
-			&::before {
-				content: "";
-				position: absolute;
-				right: -10px;
-				bottom: 100%;
-				left: -10px;
-				z-index: 1;
-				display: block;
-				height: 13px;
-				background-color: #fff;
-			}
 		}
 
-		& > li > ul {
-			top: 100%;
-			left: 0;
+		li {
+			position: relative;
 		}
 
+		/*Раскрытие вложенного списка при наведение на li*/
 		li:not(.menu__item--drop):hover {
 			& > ul {
 				opacity: 1;
@@ -399,17 +416,42 @@ header {
 			}
 		}
 
+		/*Позиционирование 2-го уровень меню*/
+		& > li > ul {
+			top: 100%;
+			left: 0;
+		}
+
+		/*Позиционирование 3+-го уровень меню*/
 		ul ul {
+			padding: 0;
 			top: 0;
 			left: 100%;
 		}
 
+		/*ссылки со 2-го уровня меню*/
 		ul &__link {
 			display: flex;
+			justify-content: space-between;
 			padding: 12px 20px 12px 20px;
 			width: 100%;
 		}
 
+		/*Элементы со 2-го уровня меню(активные)*/
+		ul li.active {
+			background-color: var(--color-primary);
+
+			& > a,
+			& > span {
+				color: var(--basick-white);
+
+				& > span svg {
+					fill: var(--basick-white);
+				}
+			}
+		}
+
+		/*Элементы со 2-го уровня меню(наведение)*/
 		ul li:not(.active):hover {
 			background-color: var(--color-primary);
 
@@ -417,60 +459,49 @@ header {
 			& > span {
 				color: var(--basick-white);
 
-				svg {
+				& > span svg {
 					fill: var(--basick-white);
 				}
 			}
 		}
 
-		ul li.active {
-			//background-color: lighten($color-secondary, 70%);
-		}
-
+		/*Вложенное меню в 1-ом уровне*/
 		&__item--drop {
 			display: flex;
 			align-items: center;
 			padding-left: 0;
 
+			& > #{$this}__link {
+				padding-left: 5px !important;
+			}
+
 			&.active > ul {
-					opacity: 1;
-					pointer-events: all;
-				}
+				opacity: 1;
+				pointer-events: all;
+			}
 
 			#{$this}__arr {
 				margin-left: 20px;
-
-				svg {
-					transform: rotate(-90deg);
-				}
 			}
 
 			#{$this}__item-toggle {
 				flex-shrink: 0;
-				margin-top: -#{getEm(2, 12)};
-				transform: scale(0.75);
+				margin-top: -#{getEm(10, 12)};
+				transform: scale(0.8);
 			}
 
 			#{$this}__item-toggle.active + .menu__link {
 				color: var(--color-primary);
 				text-shadow: 0.05px 0.05px 0 var(--color-primary), -0.05px -0.05px 0 var(--color-primary);
 			}
-
-			#{$this}__link {
-				justify-content: space-between;
-			}
-		}
-
-		&__link {
-			padding: 17px 15px 19px;
 		}
 
 		&__arr {
 			display: inline-flex;
 			align-items: center;
 			margin: getEm(3, 12) 0 0 getEm(6, 12);
-			width: getEm(11, 12);
-			height: getEm(10, 12);
+			height: getEm(11, 16);
+			width: getEm(10, 16);
 			fill: var(--textColor);
 			transition: transform $duration;
 

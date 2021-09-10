@@ -1,0 +1,34 @@
+/*==================== PRODUCTS ====================*/
+.product-pg {
+	.content-wrap {
+		padding-bottom: 0;
+	}
+
+	h1 {
+		margin-bottom: 83px;
+	}
+
+	.similarProducts-b {
+		margin-top: 85px;
+	}
+
+	@include desctop-min {
+		h1 {
+			margin-bottom: 70px;
+		}
+
+		.similarProducts-b {
+			margin-top: 65px;
+		}
+	}
+
+	@include mobile {
+		h1 {
+			margin-bottom: 51px;
+		}
+
+		.similarProducts-b {
+			margin-top: 46px;
+		}
+	}
+}

@@ -1,13 +1,15 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~
 VARIABLES
 ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+$hue-color: 5;
 
-$color-primary: #FF6F61;
+$color-primary: #ff6f61;
+$color-primary-lig: #ffebeb;
 $color-secondary: #383838;
 $color-text: #383838;
-$basick-orange: #FF7D28;
-$basick-green: #58A956;
-$basick-birch: #A0C8E4;
+$basick-orange: #ff7d28;
+$basick-green: #58a956;
+$basick-birch: #a0c8e4;
 
 :root {
 	/*font-family*/
@@ -15,12 +17,20 @@ $basick-birch: #A0C8E4;
 
 	/*colors*/
 	--color-primary: #{$color-primary};
+	--color-primary-lig: #{$color-primary-lig};
 	--color-secondary: #{$color-secondary};
 	--color-text: #{$color-text};
-	--basic-black: #000;
+	--basick-black: #000;
+	--basick-white: #fff;
 	--basick-orange: #{$basick-orange};
 	--basick-green: #{$basick-green};
 	--basick-birch: #{$basick-birch};
+
+	--color-primary-hsl: hsl(#{$hue-color}, 100%, 69%);
+
+	--scroll-bar-color: hsl(#{$hue-color}, 42%, 90%);
+	--scroll-thumb-color: hsl(#{$hue-color}, 42%, 70%);
+	--scroll-thumb-color-hover: hsl(#{$hue-color}, 42%, 60%);
 }
 
 //breakpoints
@@ -33,4 +43,3 @@ $tel: 480;
 
 /***********************Main*/
 $duration: 0.3s;
-

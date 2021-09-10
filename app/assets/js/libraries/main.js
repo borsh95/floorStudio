@@ -1,8 +1,0 @@
-"use strict";
-
-var _console;
-
-var a = [23, 23, 32];
-
-(_console = console).log.apply(_console, a);
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImEiLCJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiOzs7O0FBQUEsSUFBQUEsQ0FBQSxHQUFBLENBQUEsRUFBQSxFQUFBLEVBQUEsRUFBQSxFQUFBLENBQUE7O0FBQ0EsWUFBQUMsT0FBQSxFQUFBQyxHQUFBLGlCQUFBRixDQUFBIiwiZmlsZSI6Im1haW4uanMiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgYSA9IFsyMywgMjMsIDMyXTtcclxuY29uc29sZS5sb2coLi4uYSk7Il19

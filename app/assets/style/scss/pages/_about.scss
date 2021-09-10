@@ -1,0 +1,18 @@
+/*==================== ABOUT PAGE ====================*/
+.about-pg {
+	.gridGallery-b {
+		margin-top: 78px;
+	}
+
+	@include desctop-min {
+		.gridGallery-b {
+			margin-top: 60px;
+		}
+	}
+
+	@include mobile {
+		.gridGallery-b {
+			margin-top: 42px;
+		}
+	}
+}

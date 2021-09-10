@@ -3,13 +3,29 @@
 @import "./mixsins/mixsins";
 @import "./base/nullstyle";
 @import "./base/settings";
+@import "./base/grid";
 
 html,
 body {
-    font-family: var(--fm-1);
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--color-text);
+	font-family: var(--fm-1);
+	font-size: 16px;
+	font-weight: 400;
+	color: var(--color-text);
+	scrollbar-color: var(--scroll-thumb-color) var(--scroll-bar-color); /* «цвет ползунка» «цвет полосы скроллбара» */
+	scrollbar-width: thin; /* толщина */
+}
+
+::-webkit-scrollbar {
+	width: 0.8rem;
+	background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--scroll-thumb-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--scroll-thumb-color-hover);
 }
 
 .body {
@@ -17,7 +33,7 @@ body {
 	min-height: 100vh;
 }
 
-.global-wrap {
+.page {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
@@ -25,31 +41,120 @@ body {
 
 /*--------------------------------Common--------------------------------*/
 .container {
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    max-width: 1170px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	max-width: 1170px;
 
 	@include desctop-min {
 		max-width: 960px;
 	}
 
-    @include table {
-        padding-right: 20px;
-        padding-left: 20px;
-        max-width: 768px;
-    }
+	@include table {
+		padding-right: 20px;
+		padding-left: 20px;
+		max-width: 768px;
+	}
 
-    @include mobile {
-        padding-right: 10px;
-        padding-left: 10px;
-        max-width: 100%;
-    }
+	@include mobile {
+		padding-right: 10px;
+		padding-left: 10px;
+		max-width: 100%;
+	}
 }
 
+a[href*="tel:"],
+a[href*="mailto:"] {
+	transition: color $duration;
+
+	&:hover {
+		color: var(--color-primary);
+	}
+}
+
+%title-border-left {
+	span {
+		padding-left: getEm(18, 36);
+		border-left: getEm(11, 36) solid var(--color-primary);
+	}
+}
+
+.title-1 {
+	@extend %title-border-left;
+	font-size: 36px;
+	line-height: (44/36);
+	text-transform: uppercase;
+	text-align: center;
+
+	@include desctop-min {
+		font-size: 28px;
+	}
+
+	@include mobile {
+		font-size: 20px;
+	}
+}
+
+.title-2 {
+	@extend %title-border-left;
+	font-size: 32px;
+	line-height: (39/32);
+
+	@include desctop-min {
+		font-size: 28px;
+	}
+
+	@include mobile {
+		font-size: 18px;
+	}
+}
+
+.title-3 {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: (29/24);
+	text-transform: uppercase;
+	text-align: center;
+
+	@include desctop-min {
+		font-size: 22px;
+	}
+
+	@include mobile {
+		font-size: 18px;
+	}
+}
+
+.text {
+	font-size: 18px;
+	line-height: (35/24);
+
+	&--lg {
+		font-size: 24px;
+		line-height: (35/24);
+	}
+
+	@include desctop-min {
+		&--lg {
+			font-size: 20px;
+		}
+	}
+
+	@include mobile {
+		font-size: 16px;
+	}
+}
+
+@import "./components/interface";
 @import "./components/btns";
 @import "./components/blocks";
 @import "./components/header";
 @import "./components/footer";
+@import "./pages/index";
+@import "./pages/catalog";
+@import "./pages/basket";
+@import "./pages/about";
+@import "./pages/product";
+@import "./pages/notify";
 
 /*--------------------------------Other--------------------------------*/
